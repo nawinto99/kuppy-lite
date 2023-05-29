@@ -1,0 +1,8 @@
+{
+    "full_name": "Naveen Thurimerla",
+    "email": "nawinto99@gmail.com",
+    "github_username": "nawinto99",
+    "project_name": "kuppy-lite",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "The Kubernetes-Ready Python Web Application Template is a comprehensive solution designed to simplify the deployment of Python web applications on Kubernetes."
+  }
