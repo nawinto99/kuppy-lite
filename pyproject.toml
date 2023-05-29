@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "kuppy-lite"
+version = "0.1.0"
+description = "The Kubernetes-Ready Python Web Application Template is a comprehensive solution designed to simplify the deployment of Python web applications on Kubernetes."
+authors = ["Naveen Thurimerla <nawinto99@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cookiecutter = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
