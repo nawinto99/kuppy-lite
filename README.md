@@ -20,23 +20,47 @@ To get started with this Flask boilerplate template and deploy it on Kubernetes,
    ```
    pip install cookiecutter
    ```
+
 2. In your terminal or command prompt, navigate to the directory where you want to create your project. Run the following command
    ```
    cookiecutter https://github.com/nawinto99/kuppy-lite.git
    ```
+
 3. Cookiecutter will prompt you for input based on the template's configuration. This could include things like project name, author name, etc. Fill in the requested information and press Enter after each input.
+
 4. After you've provided all the required input, Cookiecutter will generate the project using the template. It will create the project structure and populate it with the necessary files and folders.
+
 5. Install poetry and dependencies
      ```
      pip install poetry
      poetry install
      ```
 6. Customize the Flask application code in the `app.py` file to meet your project requirements.
+
 7. Update the Dockerfile to include any additional dependencies or configurations.
+
 8. Modify the Kubernetes deployment and service files (`deployment.yaml` and `service.yaml`) to match your application's specifications.
+
 9. Set up the necessary secrets and environment variables in your GitHub repository settings. This includes Docker Hub credentials, Kubernetes cluster credentials, and any other required environment variables.
+
+   a. Navigate to your GitHub repository and go to the "Settings" tab.
+   b. In the left sidebar, click on "Secrets"
+   c. Click on "New repository secret" to create a new secret or variable.
+   d. Enter the name and value for each secret or variable. For example, for `gh_secret_kube_config`, enter the actual Kubernetes cluster credentials.
+
 10. Customize the GitHub Actions workflow (`deploy.yaml`) to match your deployment needs and configure the necessary environment variables and secrets.
+
+   a. Open the `deploy.yaml` file in your preferred text editor.
+   b. Locate the section where `gh_secret_kube_config` is used and replace it with the actual secret or environment variable you set up in step 9.
+   Example:
+   ```
+   ${{ secrets.KUBECONFIG }}
+   ```
+   c. Similarly, open the `docker-image.yml` file and replace `gh_secret_docker_hub_token` and `gh_secret_docker_hub_username` with the corresponding secrets you created in step 9.
+   d. Save the changes to the files.
+
 11. Commit your changes and push them to the `main` branch of your GitHub repository.
+
 12. GitHub Actions will automatically trigger the deployment workflow, building a Docker image, pushing it to a container registry, and deploying the application on your Kubernetes cluster.
 
 ## Testing and Code Quality
