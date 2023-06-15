@@ -25,7 +25,7 @@ To get started with this Flask boilerplate template and deploy it on Kubernetes,
    cookiecutter https://github.com/nawinto99/kuppy-lite.git
    ```
 3. Cookiecutter will prompt you for input based on the template's configuration. This could include things like project name, author name, etc. Fill in the requested information and press Enter after each input.
-4. Project Generation: After you've provided all the required input, Cookiecutter will generate the project using the template. It will create the project structure and populate it with the necessary files and folders.
+4. After you've provided all the required input, Cookiecutter will generate the project using the template. It will create the project structure and populate it with the necessary files and folders.
 5. Install poetry and dependencies
      ```
      pip install poetry
