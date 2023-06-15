@@ -27,10 +27,10 @@ To get started with this Flask boilerplate template and deploy it on Kubernetes,
 3. Cookiecutter will prompt you for input based on the template's configuration. This could include things like project name, author name, etc. Fill in the requested information and press Enter after each input.
 4. Project Generation: After you've provided all the required input, Cookiecutter will generate the project using the template. It will create the project structure and populate it with the necessary files and folders.
 5. Install poetry and dependencies
-  ```
-  pip install poetry
-  poetry install
-  ```
+     ```
+     pip install poetry
+     poetry install
+     ```
 6. Customize the Flask application code in the `app.py` file to meet your project requirements.
 7. Update the Dockerfile to include any additional dependencies or configurations.
 8. Modify the Kubernetes deployment and service files (`deployment.yaml` and `service.yaml`) to match your application's specifications.
