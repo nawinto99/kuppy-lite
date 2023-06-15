@@ -23,5 +23,5 @@ jobs:
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
-            --tag gh_secret_docker_hub_username/${{ cookiecutter.project_slug }}:latest \
+            --tag gh_secret_docker_hub_username/${{ cookiecutter.project_slug }}:$(date +%s) \
             --push .
