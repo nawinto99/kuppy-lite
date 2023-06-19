@@ -1,11 +1,15 @@
 import pytest
 
-from {{cookiecutter.project_slug}} import app
+from {{cookiecutter.project_slug}} import {{cookiecutter.project_slug}}
 
 
-def test_hello():
-    client = app.test_client()
-    response = client.get('/')
+@pytest.fixture
+def client():
+    with {{cookiecutter.project_slug}}.app.test_client() as client:
+        yield client
+
+
+def test_hello(client):
+    response = client.get("/")
     assert response.status_code == 200
-    assert response.data == b'Hello, World!'
-
+    assert response.data == b"Hello, World!"
