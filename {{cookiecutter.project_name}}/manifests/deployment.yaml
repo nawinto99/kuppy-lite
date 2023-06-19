@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{cookiecutter.project_slug}}_app
+  name: {{cookiecutter.project_slug}}-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: {{cookiecutter.project_slug}}_app
+      app: {{cookiecutter.project_slug}}-app
   template:
     metadata:
       labels:
-        app: {{cookiecutter.project_slug}}_app
+        app: {{cookiecutter.project_slug}}-app
     spec:
       containers:
-        - name: {{cookiecutter.project_slug}}_app
+        - name: {{cookiecutter.project_slug}}-app
           image: {{cookiecutter.artifactory_username}}/{{cookiecutter.project_slug}}:latest
           ports:
             - containerPort: 5000
