@@ -24,4 +24,4 @@ COPY /{{cookiecutter.project_slug}} .
 EXPOSE 5000
 
 # Start the Flask application with gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "app:{{cookiecutter.project_slug}}"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "4", "{{cookiecutter.project_slug}}:app"]
